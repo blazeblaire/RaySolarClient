@@ -1,0 +1,141 @@
+/* Register Page Styles */
+.register-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-6);
+  background-color: var(--light-gray);
+}
+
+.register-container {
+  max-width: 600px;
+  width: 100%;
+  background-color: var(--white);
+  border-radius: var(--radius-2xl);
+  border: 3px solid var(--navy-blue);
+  overflow: hidden;
+  box-shadow: var(--shadow-xl);
+}
+
+.register-form-section {
+  padding: var(--spacing-10) var(--spacing-8);
+}
+
+.register-form-content {
+  width: 100%;
+}
+
+.register-heading {
+  font-size: var(--text-xl);
+  font-weight: var(--font-semibold);
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-8);
+}
+
+/* Role Selector */
+.role-selector {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-4);
+  margin-top: var(--spacing-3);
+}
+
+.role-option {
+  position: relative;
+  cursor: pointer;
+}
+
+.role-option input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.role-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-2);
+  padding: var(--spacing-5);
+  border: 2px solid var(--medium-gray);
+  border-radius: var(--radius-lg);
+  transition: all var(--transition-base);
+  background-color: var(--white);
+}
+
+.role-option:hover .role-content {
+  border-color: var(--primary-green);
+  box-shadow: var(--shadow-sm);
+}
+
+.role-option.selected .role-content {
+  border-color: var(--primary-green);
+  background-color: rgba(46, 204, 113, 0.05);
+  box-shadow: 0 0 0 3px rgba(46, 204, 113, 0.1);
+}
+
+.role-icon {
+  width: 48px;
+  height: 48px;
+  color: var(--text-secondary);
+}
+
+.role-option.selected .role-icon {
+  color: var(--primary-green);
+}
+
+.role-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.role-content span {
+  font-size: var(--text-base);
+  font-weight: var(--font-semibold);
+  color: var(--text-primary);
+}
+
+.form-footer-center {
+  text-align: center;
+  margin-top: var(--spacing-6);
+  font-size: var(--text-sm);
+}
+
+.text-secondary {
+  color: var(--text-secondary);
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  .register-page {
+    padding: var(--spacing-4);
+  }
+
+  .register-form-section {
+    padding: var(--spacing-6) var(--spacing-4);
+  }
+
+  .brand-logo {
+    font-size: var(--text-xl);
+    margin-bottom: var(--spacing-6);
+  }
+
+  .register-heading {
+    font-size: var(--text-lg);
+  }
+
+  .role-selector {
+    grid-template-columns: 1fr;
+  }
+
+  .role-content {
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+
+  .role-icon {
+    width: 32px;
+    height: 32px;
+  }
+}
